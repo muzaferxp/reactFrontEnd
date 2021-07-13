@@ -1,25 +1,42 @@
 import React from 'react';
 
 import logo from "./logo.jfif"
-import  { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
+import  { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard,MDBIcon, MDBCardBody } from 'mdb-react-ui-kit';
 
 function Signup() {
   return (
     
-    <MDBContainer style={{"background-color" : "#f7f2f2", "min-height" : "100vh"}} fluid>
-     <MDBRow>
-        <MDBCol md="4" className='mx-auto' style={{"margin-top" : "5%"}}>
-          <MDBCard >
+    <MDBContainer style={{"background-color" : "#F6F8FC", "min-height" : "100vh"}} fluid>
+      <br />
+      <div style={{"float" : "right"}} className='px-4'>
+           <MDBBtn className='px-4 btn btn-white mx-2'>Login</MDBBtn>
+            <MDBBtn style={{"background-color" : "#9a3bf9"}}>Signup</MDBBtn>
+      </div><br />
+
+      <br /><br />
+
+     <MDBRow >
+     <MDBCol md="2">
+
+     </MDBCol>
+        <MDBCol md="4" className='' style={{"margin-top" : "0%"}}>
+
+       
+          <div style={{"width" : "100%"}} className="mx-auto  " >
+
+          
            
             <MDBCardBody className='p-0 rounded'>
           
-            <div className='p-4 ' style={{"height" : "150px", "background-color" :  "#6dafbc", "object-fit" : "scale-down"}}>
-            <img src={logo} class="rounded-circle" alt="..."  style={{"width" :" 70px" , "height" : "70px"}} />
+            <div className=' ' style={{ "object-fit" : "scale-down"}}>
+            <h1 className='text-center text-muted'>Register for ATS</h1>
+            <p className="text-center">Get Your Free Trial for 30 Days!!</p>
+
+
             </div>
-              <form className='p-4'>
+              <form className='px-4'>
                 
-                <p className="h4 text-center">Get Your Free Trial for 30 Days!!</p>
-                <div className="grey-text">
+                <div className="grey-text px-4">
                   <MDBInput
                     label="Your name"
                     icon="user"
@@ -71,27 +88,68 @@ function Signup() {
                     className = "my-4"
                     success="right"
                   />
+
+                  <MDBInput
+                    label="Username"
+                    icon="Lock"
+                    group
+                    type="email"
+                    validate
+                    error="wrong"
+                    className = "my-4"
+                    success="right"
+                  />
+                  <MDBInput
+                    label="password"
+                    icon="Lock"
+                    group
+                    type="email"
+                    validate
+                    error="wrong"
+                    className = "my-4"
+                    success="right"
+                  />
                  
                 </div>
 
 
-                <div>
+                <div className='px-4'>
                     <lable ><input type='checkbox' /> You Agree our Terms and Conditions </lable>
                 </div>
 
 
-                <div className="text-center py-2 mt-3">
-                  <MDBBtn color="cyan" className='btn btn-primary' type="submit" style={{"width" : "100%"}}>
+                <div className="text-center py-2 mt-3" >
+                  <MDBBtn color="cyan" className='btn btn-primary' type="submit" style={{"width" : "90%", "background-color" : "#9a3bf9"}}>
                     Register
                   </MDBBtn>
                 </div>
 
-                <div className=' mt-2'>
-                    <a href='/signin'>Already have an account? sign In here.</a>
-                </div>
+                
               </form>
+
+              <div className="text-center py-2 mt-3">
+                  <MDBBtn color="cyan" className='btn btn-white' type="submit" style={{"width" : "82%"}}>
+                  <MDBIcon fab icon="google" />   Register with google
+                  </MDBBtn>
+                </div>
+
+                <div className="text-center">
+                  <MDBBtn color="cyan" className='btn btn-primary' type="submit" style={{"width" : "82%"}}>
+                  <MDBIcon fab icon="facebook-f" />    Register with facebook
+                  </MDBBtn>
+                </div>
+
+                <br /><br />
+
             </MDBCardBody>
-          </MDBCard>
+          </div>
+        </MDBCol>
+        <MDBCol md="4" sm="12" style={{
+            backgroundImage : `url("https://www-cdn.ezcast-pro.com/wp-content/uploads/2019/11/EZCast-Pro-wireless-presentation-meeting-room.jpg")`,
+            backgroundRepeat: 'no-repeat',
+            objectFit : "cover",
+          }} >
+
         </MDBCol>
       </MDBRow>
     </MDBContainer>
