@@ -9,3 +9,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.primary {
+  font-family: Lato;
+  font-weight: 500;
+}
+
+.secondary {
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.input {
+  position: relative;
+  padding: 5px;
+  margin-bottom: 7.5px;
+  
+}
+.input input {
+  border: none;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  transition: 0.2s ease;
+}
+.input label {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  transition: 0.2s ease;
+}
+
+.custom-input input {
+  outline: none;
+  /*
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #00e676 4%);
+  background-position: -400px 0;
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #ddd;
+}
+.custom-input input:focus {
+  background-position: 0 0;
+}
+.custom-input label {
+  color: #aaa;
+  transition: 0.25s ease;
+}
+.custom-input input:focus + label {
+  font-weight: bold;
+  font-size: 12.5px;
+  top: -10px;
+  left: 7.5px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 95%;
+  }
+
+
+}
