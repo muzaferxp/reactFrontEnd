@@ -14,7 +14,7 @@ const Input = (props) => {
   
   return (
     <div className="custom-input input">      
-      <input type="text" id={inputRef} />
+      <input type="text" name={inputRef} />
       <label htmlFor={inputRef}>{formattedName}</label>
     </div>
   )
@@ -31,7 +31,7 @@ function Signup() {
             <MDBBtn style={{"background-color" : "#9a3bf9"}}>Signup</MDBBtn>
       </div><br />
 
-      <br /><br />
+
 
       <MDBCol>
         <MDBRow md='8' className='mx-auto'>
@@ -48,7 +48,7 @@ function Signup() {
 
 
             </div>
-              <form className='px-4'>
+              <form className='px-4' method='POST' action='/http://localhost:8000/signup'>
               <Input name="Username" inputRef="Username" />
               <Input name="Company Name" inputRef="Company Name" />
               
